@@ -10,18 +10,17 @@ class HomePage extends StatelessWidget {
         title: Text('Home Page'),
       ),
       body: Container(
-        color: Colors.lightGreen[200], // Fondo verde claro
+        color: Color(0xFFB2DFB2), // Fondo verde claro
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton.icon(
                 onPressed: () {},
-                icon: Icon(Icons.map),
+                icon: Icon(Icons.map, color: Colors.white), // Icono blanco
                 label: Text('Mapa Offline'),
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.green,
-                  onPrimary: Colors.white,
+                  backgroundColor: Color(0xFF4CAF50), // Verde más oscuro
                 ),
               ),
               SizedBox(height: 16), // Espacio entre botones
@@ -32,11 +31,10 @@ class HomePage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => SignInPage()),
                   );
                 },
-                icon: Icon(Icons.login),
+                icon: Icon(Icons.login, color: Colors.white), // Icono blanco
                 label: Text('Login'),
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.blue,
-                  onPrimary: Colors.white,
+                  backgroundColor: Color(0xFF1976D2), // Azul
                 ),
               ),
               SizedBox(height: 16), // Espacio entre botones
@@ -47,11 +45,11 @@ class HomePage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => Registration()),
                   );
                 },
-                icon: Icon(Icons.person_add),
+                icon:
+                    Icon(Icons.person_add, color: Colors.white), // Icono blanco
                 label: Text('Registro'),
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.orange,
-                  onPrimary: Colors.white,
+                  backgroundColor: Color(0xFFFFA500), // Naranja
                 ),
               ),
             ],

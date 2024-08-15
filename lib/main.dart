@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:app_qr_users_view/dashboard.dart';
-import 'package:jwt_decoder/jwt_decoder.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'homePage.dart';
 
@@ -29,8 +27,6 @@ class MyApp extends StatelessWidget {
           primaryColor: Colors.black,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: (token != null && JwtDecoder.isExpired(token) == false)
-            ? Dashboard(token: token)
-            : HomePage());
+        home: HomePage());
   }
 }

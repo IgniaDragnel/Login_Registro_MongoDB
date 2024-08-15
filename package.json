@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"nodemon index"
+    "dev": "nodemon index"
   },
   "author": "",
   "license": "ISC",
@@ -20,5 +20,14 @@
     "jsonwebtoken": "^9.0.1",
     "mongoose": "^7.4.1",
     "nodemon": "^3.0.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaulHeredia/app_qr_users_view.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PaulHeredia/app_qr_users_view/issues"
+  },
+  "homepage": "https://github.com/PaulHeredia/app_qr_users_view#readme"
 }

@@ -1,3 +1,4 @@
+import 'package:app_qr_users_view/homePage.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
@@ -10,7 +11,11 @@ class QRGeneratePage extends StatelessWidget {
   // Function to handle logout
   void handleLogout(BuildContext context) {
     // Perform any logout actions here (e.g., clearing tokens, shared preferences)
-    Navigator.pop(context); // Navigate back to the previous screen
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+          builder: (context) => HomePage()), // Replace with your HomePage class
+    );
   }
 
   @override
@@ -18,6 +23,13 @@ class QRGeneratePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("QR Code"),
+        backgroundColor: Colors.green,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.logout),
+            onPressed: () => handleLogout(context),
+          ),
+        ],
       ),
       body: Center(
         child: Column(
@@ -29,11 +41,22 @@ class QRGeneratePage extends StatelessWidget {
               size: 200,
             ),
             SizedBox(height: 20),
-            Text("Scannear QR.0"),
+            Text(
+              "Escanear Código QR",
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.green,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () => handleLogout(context),
-              child: Text("Logout"),
+              child: Text("Cerrar Sesión"),
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.green,
+              ),
             ),
           ],
         ),
